@@ -8,3 +8,4 @@
 
 | Race | Time | Lvl | H2 | H3 | H4 | Podium (1/2/3) | Result | Next | P&L | Cumul |
 |------|------|-----|----|----|----|----------------|--------|------|-----|-------|
+| 190 | 11:30 | 0 | 0 | 0 | 0 | #4 Golden Riddle / #1 Road Runner / #8 Quelindo | OBSERVE | 1 | +0 Ft | +0 Ft | Warmup race only - ladder starts on next race
