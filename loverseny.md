@@ -19,3 +19,4 @@
 | 117 | 07:51 | 1 | 200 | 170 | 150 | #2 Avalon Spirit / #6 Luz del Corazon / #1 Nimue Eclat | WIN | 1 | +480 Ft | +980 Ft |
 | 118 | 07:54 | 1 | 200 | 170 | 150 | #3 Circe Verite / #2 Rose Obscure / #7 Luz del Corazon | WIN | 1 | +500 Ft | +1480 Ft |
 | 119 | 07:57 | 1 | 200 | 170 | 150 | #7 Alhambra Night / #11 Galadriel Song / #2 La Mariposa | LOSS | 2 | -520 Ft | +960 Ft |
+| 120 | 08:00 | 2 | 300 | 250 | 220 | #4 Estemona / #1 Reina del Alba / #7 Janko | WIN | 1 | +770 Ft | +1730 Ft |
