@@ -1,5 +1,19 @@
-# Loverseny Log
+# TippmixPro vSport Lóverseny — TEST MODE Log (RESET, PONTOS TIMING +4s)
 
-_Meg nincs adat. Inditsd el a push scriptet a gepeden (`INDITAS.cmd`)._
+**Mode:** OBSERVATION ONLY
+**Strategy:** 2/3/4 ló TÉT-re, ladder; reset on win, +1 on loss, max L7
 
-A `C:\loverseny\loverseny.md` tartalma 3 percenkent ide kerul.
+**PONTOS TIMING MODEL (3-min cycle):**
+- Race listed `HH:MM` → tényleges start: `HH:MM:10`
+- Race vége: `HH:(MM+1):02` (52 sec race)
+- **Result window:** `HH:(MM+1):02 → HH:(MM+1):29` (27 sec)
+- **Eredmény capture:** `HH:(MM+1):22` (20s into result window — alulra kicsúszó eredménystream szélesebb)
+- **Bet window:** `HH:(MM+1):31 → HH:(MM+2):55`
+- **Bet capture:** ~`HH:(MM+1):40`
+
+## Race Log
+
+| Race | Time | Lvl | H2 | H3 | H4 | Dobogó (1/2/3) | Result | Next | P&L | Cumul |
+|------|------|-----|-----|-----|-----|-----------------|--------|-------|-----|--------|
+| 116 | 07:48 | 1 | 200 | 170 | 150 | #3 Herakleitosz / #4 Twilight Sparkle / #5 Ikarosz Fia | WIN | 1 | +500 Ft | +500 Ft |
+| 117 | 07:51 | 1 | 200 | 170 | 150 | #2 Avalon Spirit / #6 Luz del Corazon / #1 Nimue Eclat | WIN | 1 | +480 Ft | +980 Ft |
