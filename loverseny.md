@@ -17,3 +17,4 @@
 | 199 | 11:57 | 1 | 200 | 170 | 150 | #7 Galadriel Song / #8 Honeycrash / #4 My Luck | LOSS | 2 | -520 Ft | -340 Ft |
 | 201 | 12:03 | 0 | 0 | 0 | 0 | #1 Iron Glory / #4 Prince of Ashes / #3 Dusty Lord | SKIP | 2 | +0 Ft | -340 Ft | No valid pre-close arm for this race - skipped (armed race was 200 12:00)
 | 202 | 12:06 | 2 | 300 | 250 | 220 | #6 Queen's Echo / #5 Bella / #8 Bellerophon Steel | LOSS | 3 | -770 Ft | -1110 Ft |
+| 206 | 12:18 | 0 | 0 | 0 | 0 | #3 Jeanne d'Acier / #4 Mabon Light / #1 Gilgamesh Fire | SKIP | 3 | +0 Ft | -1110 Ft | No valid pre-close arm for this race - skipped (armed race was 203 12:09)
