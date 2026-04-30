@@ -13,3 +13,4 @@
 
 | Race | Time | Lvl | H2 | H3 | H4 | Dobogó (1/2/3) | Result | Next | P&L | Cumul |
 |------|------|-----|-----|-----|-----|-----------------|--------|-------|-----|--------|
+| 130 | 08:30 | 1 | 200 | 170 | 150 | #5 Meluzina / #2 Larmes dOpale / #7 Leylandi Ciprus | LOSS | 2 | -520 Ft | -520 Ft |
