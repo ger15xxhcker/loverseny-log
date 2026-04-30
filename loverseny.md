@@ -12,3 +12,4 @@
 | 191 | 11:33 | 0 | 0 | 0 | 0 | #6 Elric Shadow / #2 Twilight Sparkle / #1 Golden Rebel | SKIP | 1 | +0 Ft | +0 Ft | No valid pre-close arm for this race - skipped
 | 195 | 11:45 | 1 | 200 | 170 | 150 | #5 Sybilla Rain / #9 Velvet Storm / #3 Beat Zenesz | LOSS | 2 | -520 Ft | -520 Ft |
 | 196 | 11:48 | 0 | 0 | 0 | 0 | #5 Héloïse Dusk / #1 Gina Maxi / #9 Themis Crown | SKIP | 2 | +0 Ft | -520 Ft | No valid pre-close arm for this race - skipped
+| 197 | 11:51 | 2 | 300 | 250 | 220 | #1 Racing Glory / #2 Avalon Spirit / #3 Merlin's Code | LOSS | 3 | -770 Ft | -1290 Ft |
