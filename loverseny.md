@@ -14,3 +14,4 @@
 | Race | Time | Lvl | H2 | H3 | H4 | Dobogó (1/2/3) | Result | Next | P&L | Cumul |
 |------|------|-----|-----|-----|-----|-----------------|--------|-------|-----|--------|
 | 130 | 08:30 | 1 | 200 | 170 | 150 | #5 Meluzina / #2 Larmes dOpale / #7 Leylandi Ciprus | LOSS | 2 | -520 Ft | -520 Ft |
+| 131 | 08:33 | 2 | 300 | 250 | 220 | #2 Apollon / #4 Elysium Wind / #3 Heloise Dusk | WIN | 1 | +730 Ft | +210 Ft |
