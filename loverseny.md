@@ -19,3 +19,4 @@
 | 133 | 08:39 | 1 | 200 | 170 | 150 | #8 Juno Drift / #6 Ishtar Blaze / #4 Heloise Dusk | LOSS | 2 | -520 Ft | +190 Ft |
 | 134 | 08:42 | 2 | 300 | 250 | 220 | #3 Vasparipa / #1 Philomela Rise / #5 Hector Blaze | WIN | 1 | +730 Ft | +920 Ft |
 | 135 | 08:45 | 1 | 200 | 170 | 150 | #1 Beowulf Son / #2 Ishtar Blaze / #4 Varosbiro | LOSS | 2 | -520 Ft | +400 Ft |
+| 136 | 08:48 | 2 | 300 | 250 | 220 | #9 Racing Glory / #2 Antigone Snow / #5 Belle Victoire | LOSS | 3 | -770 Ft | -370 Ft |
