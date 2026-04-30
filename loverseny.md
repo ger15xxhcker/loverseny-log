@@ -38,3 +38,4 @@
 | 234 | 13:42 | 2 | 300 | 250 | 220 | #1 Tristan Rouge / #7 Stormshade / #5 Don Faustino | LOSS | 3 | -770 Ft | +1490 Ft |
 | 235 | 13:45 | 3 | 600 | 500 | 430 | #3 Odüsszeusz Run / #4 Circe Vérité / #6 Akito | WIN | 1 | +1470 Ft | +2960 Ft |
 | 236 | 13:48 | 1 | 200 | 170 | 150 | #6 Holdharcos / #5 Gilgamesh Fire / #8 Dollárpapa | LOSS | 2 | -520 Ft | +2440 Ft |
+| 237 | 13:51 | 2 | 300 | 250 | 220 | #2 Frostbite Lady / #3 Nebula Lys / #7 Újra | WIN | 1 | +730 Ft | +3170 Ft |
