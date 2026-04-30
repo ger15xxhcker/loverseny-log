@@ -302,10 +302,21 @@
 
       const hash = md.length + '_' + (meta && meta.updated_at ? meta.updated_at : '');
       if (hash !== lastHash) {
-        const html = md.trim()
-          ? marked.parse(md)
-          : '<div class="empty no-data">Még nincs adat</div>';
-        document.getElementById('content').innerHTML = html;
+        const target = document.getElementById('content');
+        if (!md.trim()) {
+          target.innerHTML = '<div class="empty no-data">Még nincs adat</div>';
+        } else {
+          // Csak tablazatokat tartunk meg (a leiras + bullet listak elrejtve)
+          const tmp = document.createElement('div');
+          tmp.innerHTML = marked.parse(md);
+          const tables = tmp.querySelectorAll('table');
+          if (tables.length === 0) {
+            target.innerHTML = '<div class="empty no-data">Nincs táblázat a fileban</div>';
+          } else {
+            target.innerHTML = '';
+            tables.forEach(t => target.appendChild(t));
+          }
+        }
         wrapTables();
         lastHash = hash;
       }
