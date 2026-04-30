@@ -34,3 +34,4 @@
 | 229 | 13:27 | 1 | 200 | 170 | 150 | #2 Cain du Vent / #5 Honeycrash / #4 Mafhum | WIN | 1 | +480 Ft | +2300 Ft |
 | 230 | 13:30 | 1 | 200 | 170 | 150 | #2 Ciel Oublié / #4 Coquette Rouge / #7 Tündér Ilona | WIN | 1 | +480 Ft | +2780 Ft |
 | 231 | 13:33 | 1 | 200 | 170 | 150 | #1 Elit Mandea / #2 Pandora Sky / #4 Psyche Fleur | LOSS | 2 | -520 Ft | +2260 Ft |
+| 233 | 13:39 | 0 | 0 | 0 | 0 | #6 Bijou Noir / #1 Furia del Norte / #5 Ophelia Grace | SKIP | 2 | +0 Ft | +2260 Ft | No valid pre-close arm for this race - skipped (armed race was 232 13:36)
