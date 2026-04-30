@@ -24,3 +24,4 @@
 | 214 | 12:42 | 0 | 0 | 0 | 0 | #4 March Groom / #7 Prince of Ashes / #8 Ikarosz Fia | SKIP | 1 | +0 Ft | +410 Ft | No valid pre-close arm for this race - skipped (armed race was 213 12:39)
 | 215 | 12:45 | 1 | 200 | 170 | 150 | #4 Estemona / #8 Villám / #9 Queen Monroe | WIN | 1 | +530 Ft | +940 Ft |
 | 216 | 12:48 | 1 | 200 | 170 | 150 | #1 Mélusine Rose / #2 Midnight Whisper / #3 Nausikaa | LOSS | 2 | -520 Ft | +420 Ft |
+| 217 | 12:51 | 2 | 300 | 250 | 220 | #2 Bellerophon Steel / #3 Vasparipa / #6 Thanatosz | WIN | 1 | +730 Ft | +1150 Ft |
