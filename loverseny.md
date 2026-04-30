@@ -22,3 +22,4 @@
 | 210 | 12:30 | 3 | 600 | 500 | 430 | #1 Thunder Chapel / #3 Furia del Norte / #5 Fenrir Blaze | LOSS | 4 | -1530 Ft | -2640 Ft |
 | 212 | 12:36 | 4 | 1300 | 1050 | 900 | #4 Jeanne d'Acier / #2 Élektra Mist / #5 Huba | WIN | 1 | +3050 Ft | +410 Ft |
 | 214 | 12:42 | 0 | 0 | 0 | 0 | #4 March Groom / #7 Prince of Ashes / #8 Ikarosz Fia | SKIP | 1 | +0 Ft | +410 Ft | No valid pre-close arm for this race - skipped (armed race was 213 12:39)
+| 215 | 12:45 | 1 | 200 | 170 | 150 | #4 Estemona / #8 Villám / #9 Queen Monroe | WIN | 1 | +530 Ft | +940 Ft |
