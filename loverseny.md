@@ -21,3 +21,4 @@
 | 119 | 07:57 | 1 | 200 | 170 | 150 | #7 Alhambra Night / #11 Galadriel Song / #2 La Mariposa | LOSS | 2 | -520 Ft | +960 Ft |
 | 120 | 08:00 | 2 | 300 | 250 | 220 | #4 Estemona / #1 Reina del Alba / #7 Janko | WIN | 1 | +770 Ft | +1730 Ft |
 | 121 | 08:03 | 1 | 200 | 170 | 150 | #3 Furia del Norte / #6 Golden Riddle / #5 Lama | WIN | 1 | +500 Ft | +2230 Ft |
+| 122 | 08:06 | 1 | 200 | 170 | 150 | #4 Silversaint / #3 Seperate Opinion / #7 Beowulf Son | WIN | 1 | +530 Ft | +2760 Ft |
