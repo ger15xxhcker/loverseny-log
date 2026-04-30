@@ -25,3 +25,4 @@
 | 139 | 08:57 | 4 | 1300 | 1050 | 900 | #3 Holdharcos / #6 Circe Verite / #7 Midnight Duke | WIN | 1 | +3050 Ft | +1150 Ft |
 | 140 | 09:00 | — | — | — | — | NEM FOGADTUNK (csak 7s volt) | SKIP | 1 | 0 Ft | +1150 Ft |
 | 141 | 09:03 | 1 | 200 | 170 | 150 | #9 Csillaghullas / #4 Frostbite Lady / #6 Offlino | LOSS | 2 | -520 Ft | +630 Ft |
+| 142 | 09:06 | 2 | 300 | 250 | 220 | #2 Mabon Light / #5 Midnight Duke / #6 Fekete Kincsem | WIN | 1 | +730 Ft | +1360 Ft |
