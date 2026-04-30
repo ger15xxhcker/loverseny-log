@@ -26,3 +26,4 @@
 | 124 | 08:12 | 2 | 300 | 250 | 220 | #4 Don Faustino / #5 Titan / #1 Coquette Rouge | WIN | 1 | +770 Ft | +3010 Ft |
 | 125 | 08:15 | 1 | 200 | 170 | 150 | SKIPPED — result panel ablak rövid | SKIPPED | 1 | ? | +3010 Ft |
 | 126 | 08:18 | 1 | 200 | 170 | 150 | #4 Ikarosz Fia / #1 Golden Sea / #3 National Flirt | WIN | 1 | +530 Ft | +3540 Ft |
+| 127 | 08:21 | 1 | 200 | 170 | 150 | #6 Gesztenye / #3 Luz del Corazon / #1 Europas Dream | LOSS | 2 | -520 Ft | +3020 Ft |
