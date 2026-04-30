@@ -20,3 +20,4 @@
 | 134 | 08:42 | 2 | 300 | 250 | 220 | #3 Vasparipa / #1 Philomela Rise / #5 Hector Blaze | WIN | 1 | +730 Ft | +920 Ft |
 | 135 | 08:45 | 1 | 200 | 170 | 150 | #1 Beowulf Son / #2 Ishtar Blaze / #4 Varosbiro | LOSS | 2 | -520 Ft | +400 Ft |
 | 136 | 08:48 | 2 | 300 | 250 | 220 | #9 Racing Glory / #2 Antigone Snow / #5 Belle Victoire | LOSS | 3 | -770 Ft | -370 Ft |
+| 137 | 08:51 | 3 | 600 | 500 | 430 | #1 Prince of Ashes / #9 Jormungandr / #2 Belmundo | LOSS | 4 | -1530 Ft | -1900 Ft |
