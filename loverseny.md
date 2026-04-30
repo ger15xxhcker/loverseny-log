@@ -15,3 +15,4 @@
 | 197 | 11:51 | 2 | 300 | 250 | 220 | #1 Racing Glory / #2 Avalon Spirit / #3 Merlin's Code | LOSS | 3 | -770 Ft | -1290 Ft |
 | 198 | 11:54 | 3 | 600 | 500 | 430 | #3 Lidohill / #1 Európa's Dream / #6 Gilgamesh Fire | WIN | 1 | +1470 Ft | +180 Ft |
 | 199 | 11:57 | 1 | 200 | 170 | 150 | #7 Galadriel Song / #8 Honeycrash / #4 My Luck | LOSS | 2 | -520 Ft | -340 Ft |
+| 201 | 12:03 | 0 | 0 | 0 | 0 | #1 Iron Glory / #4 Prince of Ashes / #3 Dusty Lord | SKIP | 2 | +0 Ft | -340 Ft | No valid pre-close arm for this race - skipped (armed race was 200 12:00)
