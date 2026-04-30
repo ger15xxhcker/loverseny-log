@@ -29,3 +29,4 @@
 | 219 | 12:57 | 1 | 200 | 170 | 150 | #1 Ragnar Volt / #7 Garabonciás / #3 Artemis Trail | LOSS | 2 | -520 Ft | +1110 Ft |
 | 220 | 13:00 | 2 | 300 | 250 | 220 | #7 Prince of Ashes / #6 Broken Crown / #2 Queen Monroe | LOSS | 3 | -770 Ft | +340 Ft |
 | 221 | 13:03 | 3 | 600 | 500 | 430 | #4 Nimue Éclat / #2 Offlinó / #5 Prince of Ashes | WIN | 1 | +1480 Ft | +1820 Ft |
+| 224 | 13:12 | 0 | 0 | 0 | 0 | #1 Viento Perdido / #5 Villám / #4 Brünnhilde Run | SKIP | 1 | +0 Ft | +1820 Ft | No valid pre-close arm for this race - skipped (armed race was 222 13:06)
