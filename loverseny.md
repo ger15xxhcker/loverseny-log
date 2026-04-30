@@ -25,3 +25,4 @@
 | 215 | 12:45 | 1 | 200 | 170 | 150 | #4 Estemona / #8 Villám / #9 Queen Monroe | WIN | 1 | +530 Ft | +940 Ft |
 | 216 | 12:48 | 1 | 200 | 170 | 150 | #1 Mélusine Rose / #2 Midnight Whisper / #3 Nausikaa | LOSS | 2 | -520 Ft | +420 Ft |
 | 217 | 12:51 | 2 | 300 | 250 | 220 | #2 Bellerophon Steel / #3 Vasparipa / #6 Thanatosz | WIN | 1 | +730 Ft | +1150 Ft |
+| 218 | 12:54 | 1 | 200 | 170 | 150 | #2 Rocky Force / #4 Madame Fleur / #5 Sunshine | WIN | 1 | +480 Ft | +1630 Ft |
