@@ -2,115 +2,288 @@
 <html lang="hu">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0f1419" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
 <title>Loverseny Log</title>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <style>
   :root {
     --bg: #0f1419;
-    --panel: #1a2028;
-    --border: #2a3340;
+    --panel: #161c24;
+    --panel-2: #1a2028;
+    --border: #242c38;
     --text: #e6e8eb;
-    --muted: #8a94a3;
+    --muted: #7a8390;
     --accent: #4fc3f7;
-    --accent-2: #66bb6a;
+    --ok: #66bb6a;
     --err: #ef5350;
-    --row-alt: #161c24;
+    --row-alt: #131820;
+    --shadow: 0 1px 3px rgba(0,0,0,0.3);
   }
   @media (prefers-color-scheme: light) {
     :root {
-      --bg: #f7f8fa;
-      --panel: #ffffff;
+      --bg: #ffffff;
+      --panel: #fafbfc;
+      --panel-2: #ffffff;
       --border: #e3e7ec;
       --text: #1a1f26;
       --muted: #6b7480;
       --accent: #0277bd;
-      --accent-2: #2e7d32;
+      --ok: #2e7d32;
       --err: #c62828;
-      --row-alt: #f3f5f8;
+      --row-alt: #f5f7fa;
+      --shadow: 0 1px 2px rgba(0,0,0,0.06);
     }
   }
-  * { box-sizing: border-box; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   html, body { margin: 0; padding: 0; }
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.55;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    line-height: 1.5;
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
+
+  /* ---------- header ---------- */
   header {
     background: var(--panel);
     border-bottom: 1px solid var(--border);
-    padding: 16px 24px;
+    padding: 10px 14px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
     position: sticky;
     top: 0;
     z-index: 10;
-    backdrop-filter: blur(8px);
   }
-  h1 { margin: 0; font-size: 18px; font-weight: 600; letter-spacing: 0.3px; }
-  .meta { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--muted); }
-  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); transition: background 0.3s; }
-  .dot.ok { background: var(--accent-2); box-shadow: 0 0 8px var(--accent-2); }
-  .dot.err { background: var(--err); box-shadow: 0 0 8px var(--err); }
-  main { max-width: 1200px; margin: 0 auto; padding: 24px; }
+  h1 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  h1::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  #updated { display: none; }
+  @media (min-width: 600px) {
+    #updated { display: inline; font-size: 12px; }
+    h1 { font-size: 16px; }
+  }
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--muted);
+    transition: background 0.3s, box-shadow 0.3s;
+    flex-shrink: 0;
+  }
+  .dot.ok { background: var(--ok); box-shadow: 0 0 0 3px rgba(102,187,106,0.18); }
+  .dot.err { background: var(--err); box-shadow: 0 0 0 3px rgba(239,83,80,0.18); }
+
+  /* ---------- main ---------- */
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 14px;
+  }
+  @media (min-width: 700px) { main { padding: 24px; } }
+
+  /* ---------- markdown content ---------- */
   #content { font-size: 14px; }
+  #content > *:first-child { margin-top: 0; }
   #content h1, #content h2, #content h3 {
-    border-bottom: 1px solid var(--border); padding-bottom: 6px; margin-top: 28px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+    margin: 24px 0 12px;
+    line-height: 1.3;
   }
-  #content h1 { font-size: 22px; }
-  #content h2 { font-size: 18px; }
-  #content h3 { font-size: 16px; }
-  #content table {
-    border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 13px;
-    background: var(--panel); border-radius: 6px; overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  #content h1 { font-size: 18px; }
+  #content h2 { font-size: 16px; color: var(--accent); border: none; padding: 0; }
+  #content h3 { font-size: 14px; }
+  @media (min-width: 700px) {
+    #content h1 { font-size: 22px; }
+    #content h2 { font-size: 18px; }
+    #content h3 { font-size: 16px; }
   }
-  #content th, #content td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border); }
-  #content th {
-    background: var(--bg); font-weight: 600; color: var(--accent);
-    text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px;
-  }
-  #content tr:nth-child(even) td { background: var(--row-alt); }
-  #content tr:hover td { background: rgba(79, 195, 247, 0.08); }
+  #content p { margin: 8px 0; }
+  #content ul, #content ol { padding-left: 22px; }
+  #content li { margin: 3px 0; }
   #content code {
-    background: var(--row-alt); padding: 2px 6px; border-radius: 3px;
-    font-family: "Cascadia Code", Consolas, monospace; font-size: 12px;
+    background: var(--panel);
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-family: "Cascadia Code", Consolas, "Courier New", monospace;
+    font-size: 12px;
+    word-break: break-word;
   }
   #content pre {
-    background: var(--panel); border: 1px solid var(--border);
-    padding: 12px; border-radius: 6px; overflow-x: auto;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    padding: 10px;
+    border-radius: 6px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 12px;
   }
   #content pre code { background: none; padding: 0; }
   #content blockquote {
-    border-left: 3px solid var(--accent); padding-left: 12px;
-    color: var(--muted); margin: 12px 0;
+    border-left: 3px solid var(--accent);
+    padding: 4px 0 4px 12px;
+    color: var(--muted);
+    margin: 12px 0;
   }
-  .empty { text-align: center; color: var(--muted); padding: 60px 20px; font-size: 14px; }
+
+  /* ---------- table (mobile-first) ---------- */
+  .table-wrap {
+    margin: 12px -14px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    background: var(--panel-2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  @media (min-width: 700px) {
+    .table-wrap {
+      margin: 16px 0;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+  }
+  #content table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+  }
+  @media (min-width: 700px) { #content table { font-size: 13px; } }
+  #content th, #content td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  #content th {
+    background: var(--panel);
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.4px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  /* sticky first column on mobile */
+  #content td:first-child, #content th:first-child {
+    position: sticky;
+    left: 0;
+    background: var(--panel-2);
+    font-weight: 600;
+    box-shadow: 1px 0 0 var(--border);
+  }
+  #content th:first-child { background: var(--panel); z-index: 2; }
+  #content tr:nth-child(even) td { background: var(--row-alt); }
+  #content tr:nth-child(even) td:first-child { background: var(--row-alt); }
+  #content tr:hover td { background: rgba(79,195,247,0.06); }
+  #content tr:hover td:first-child { background: rgba(79,195,247,0.06); }
+
+  /* highlight WIN/LOSS-like cells subtly */
+  #content td:has(strong) { font-weight: 500; }
+
+  /* ---------- empty state ---------- */
+  .empty {
+    text-align: center;
+    color: var(--muted);
+    padding: 60px 20px;
+    font-size: 14px;
+  }
+  .empty::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    border-top-color: var(--accent);
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .empty.no-data::before { display: none; }
+
+  /* ---------- footer ---------- */
   .footer {
-    text-align: center; color: var(--muted); font-size: 11px;
-    padding: 24px; border-top: 1px solid var(--border); margin-top: 40px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 10px;
+    padding: 20px 14px;
+    margin-top: 20px;
+    border-top: 1px solid var(--border);
   }
+
+  /* hide scrollbar visually but keep functional on mobile */
+  .table-wrap::-webkit-scrollbar { height: 6px; }
+  .table-wrap::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  .table-wrap::-webkit-scrollbar-track { background: transparent; }
 </style>
 </head>
 <body>
 <header>
   <h1>Loverseny Log</h1>
   <div class="meta">
-    <span id="updated">betoltes...</span>
+    <span id="updated"></span>
+    <span id="age">—</span>
     <span class="dot" id="dot" title="kapcsolat allapota"></span>
   </div>
 </header>
 <main>
-  <div id="content"><div class="empty">Betoltes...</div></div>
+  <div id="content"><div class="empty">Betoltes</div></div>
 </main>
-<div class="footer">Auto-frissites 30 mp-enkent &middot; GitHub Pages</div>
+<div class="footer">Auto-frissites 30 mp · GitHub Pages</div>
 <script>
   marked.setOptions({ gfm: true, breaks: false });
   let lastHash = null;
+  let lastUpdatedAt = null;
+
+  function fmtAge(d) {
+    const s = Math.max(0, Math.round((Date.now() - d.getTime()) / 1000));
+    if (s < 60) return s + ' mp';
+    if (s < 3600) return Math.round(s/60) + ' perc';
+    return Math.round(s/3600) + ' óra';
+  }
+
+  function wrapTables() {
+    document.querySelectorAll('#content table').forEach(t => {
+      if (t.parentElement.classList.contains('table-wrap')) return;
+      const wrap = document.createElement('div');
+      wrap.className = 'table-wrap';
+      t.parentNode.insertBefore(wrap, t);
+      wrap.appendChild(t);
+    });
+  }
 
   async function load() {
     try {
@@ -129,32 +302,35 @@
 
       const hash = md.length + '_' + (meta && meta.updated_at ? meta.updated_at : '');
       if (hash !== lastHash) {
-        document.getElementById('content').innerHTML = md.trim()
+        const html = md.trim()
           ? marked.parse(md)
-          : '<div class="empty">Meg nincs adat. Inditsd el a push scriptet a gepeden.</div>';
+          : '<div class="empty no-data">Még nincs adat</div>';
+        document.getElementById('content').innerHTML = html;
+        wrapTables();
         lastHash = hash;
       }
 
       if (meta && meta.updated_at) {
-        const d = new Date(meta.updated_at);
-        const ageSec = Math.round((Date.now() - d.getTime()) / 1000);
-        const ageStr = ageSec < 60 ? ageSec + ' mp' :
-                       ageSec < 3600 ? Math.round(ageSec/60) + ' perc' :
-                       Math.round(ageSec/3600) + ' ora';
-        document.getElementById('updated').textContent =
-          'Frissitve: ' + d.toLocaleString('hu-HU') + ' (' + ageStr + ' ezelott)';
-      } else {
-        document.getElementById('updated').textContent = 'nincs idobelyeg';
+        lastUpdatedAt = new Date(meta.updated_at);
+        document.getElementById('updated').textContent = lastUpdatedAt.toLocaleString('hu-HU');
       }
+      tickAge();
       document.getElementById('dot').className = 'dot ok';
     } catch (e) {
       document.getElementById('dot').className = 'dot err';
-      document.getElementById('updated').textContent = 'kapcsolati hiba';
+      document.getElementById('age').textContent = 'hiba';
+    }
+  }
+
+  function tickAge() {
+    if (lastUpdatedAt) {
+      document.getElementById('age').textContent = fmtAge(lastUpdatedAt);
     }
   }
 
   load();
   setInterval(load, 30000);
+  setInterval(tickAge, 5000);
 </script>
 </body>
 </html>
