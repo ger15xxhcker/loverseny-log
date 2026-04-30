@@ -11,3 +11,4 @@
 | 250 | ? | 0 | 0 | 0 | 0 | #2 5,00 / #3 Horse 3 | OBSERVE | 1 | +0 Ft | +0 Ft | Warmup race only - ladder starts on next race
 | 251 | 14:33 | 1 | 200 | 170 | 150 | #1 Sybilla Rain / #8 Joker / #3 Hector Blaze | LOSS | 2 | -520 Ft | -520 Ft |
 | 252 | 14:36 | 2 | 300 | 250 | 220 | #4 Gilgamesh Fire / #7 Barbarossa / #11 Perseus Flame | WIN | 1 | +770 Ft | +250 Ft |
+| 253 | 14:39 | 1 | 200 | 170 | 150 | #3 Royal Mist / #6 Estemona / #1 Fenrir Blaze | WIN | 1 | +500 Ft | +750 Ft |
