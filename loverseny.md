@@ -22,3 +22,4 @@
 | 136 | 08:48 | 2 | 300 | 250 | 220 | #9 Racing Glory / #2 Antigone Snow / #5 Belle Victoire | LOSS | 3 | -770 Ft | -370 Ft |
 | 137 | 08:51 | 3 | 600 | 500 | 430 | #1 Prince of Ashes / #9 Jormungandr / #2 Belmundo | LOSS | 4 | -1530 Ft | -1900 Ft |
 | 138 | 08:54 | 4 | 1300 | 1050 | 900 | SKIPPED — capture túl későn (29s) | SKIPPED | 4 | ? | -1900 Ft |
+| 139 | 08:57 | 4 | 1300 | 1050 | 900 | #3 Holdharcos / #6 Circe Verite / #7 Midnight Duke | WIN | 1 | +3050 Ft | +1150 Ft |
