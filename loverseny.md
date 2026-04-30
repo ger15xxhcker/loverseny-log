@@ -18,3 +18,4 @@
 | 201 | 12:03 | 0 | 0 | 0 | 0 | #1 Iron Glory / #4 Prince of Ashes / #3 Dusty Lord | SKIP | 2 | +0 Ft | -340 Ft | No valid pre-close arm for this race - skipped (armed race was 200 12:00)
 | 202 | 12:06 | 2 | 300 | 250 | 220 | #6 Queen's Echo / #5 Bella / #8 Bellerophon Steel | LOSS | 3 | -770 Ft | -1110 Ft |
 | 206 | 12:18 | 0 | 0 | 0 | 0 | #3 Jeanne d'Acier / #4 Mabon Light / #1 Gilgamesh Fire | SKIP | 3 | +0 Ft | -1110 Ft | No valid pre-close arm for this race - skipped (armed race was 203 12:09)
+| 209 | 12:27 | 0 | 0 | 0 | 0 | #2 Mabon Light / #7 Gilgamesh Fire / #5 Ostinato | SKIP | 3 | +0 Ft | -1110 Ft | No valid pre-close arm for this race - skipped (armed race was 208 12:24)
