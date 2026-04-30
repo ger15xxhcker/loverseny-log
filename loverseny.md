@@ -31,3 +31,4 @@
 | 221 | 13:03 | 3 | 600 | 500 | 430 | #4 Nimue Éclat / #2 Offlinó / #5 Prince of Ashes | WIN | 1 | +1480 Ft | +1820 Ft |
 | 224 | 13:12 | 0 | 0 | 0 | 0 | #1 Viento Perdido / #5 Villám / #4 Brünnhilde Run | SKIP | 1 | +0 Ft | +1820 Ft | No valid pre-close arm for this race - skipped (armed race was 222 13:06)
 | 228 | 13:24 | 0 | 0 | 0 | 0 | #2 Belle Victoire / #1 Chiméra Song / #10 Béowulf Son | SKIP | 1 | +0 Ft | +1820 Ft | No valid pre-close arm for this race - skipped (armed race was 225 13:15)
+| 229 | 13:27 | 1 | 200 | 170 | 150 | #2 Cain du Vent / #5 Honeycrash / #4 Mafhum | WIN | 1 | +480 Ft | +2300 Ft |
