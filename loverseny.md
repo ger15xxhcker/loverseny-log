@@ -27,3 +27,4 @@
 | 217 | 12:51 | 2 | 300 | 250 | 220 | #2 Bellerophon Steel / #3 Vasparipa / #6 Thanatosz | WIN | 1 | +730 Ft | +1150 Ft |
 | 218 | 12:54 | 1 | 200 | 170 | 150 | #2 Rocky Force / #4 Madame Fleur / #5 Sunshine | WIN | 1 | +480 Ft | +1630 Ft |
 | 219 | 12:57 | 1 | 200 | 170 | 150 | #1 Ragnar Volt / #7 Garabonciás / #3 Artemis Trail | LOSS | 2 | -520 Ft | +1110 Ft |
+| 220 | 13:00 | 2 | 300 | 250 | 220 | #7 Prince of Ashes / #6 Broken Crown / #2 Queen Monroe | LOSS | 3 | -770 Ft | +340 Ft |
