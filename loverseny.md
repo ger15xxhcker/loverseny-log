@@ -20,3 +20,4 @@
 | 206 | 12:18 | 0 | 0 | 0 | 0 | #3 Jeanne d'Acier / #4 Mabon Light / #1 Gilgamesh Fire | SKIP | 3 | +0 Ft | -1110 Ft | No valid pre-close arm for this race - skipped (armed race was 203 12:09)
 | 209 | 12:27 | 0 | 0 | 0 | 0 | #2 Mabon Light / #7 Gilgamesh Fire / #5 Ostinato | SKIP | 3 | +0 Ft | -1110 Ft | No valid pre-close arm for this race - skipped (armed race was 208 12:24)
 | 210 | 12:30 | 3 | 600 | 500 | 430 | #1 Thunder Chapel / #3 Furia del Norte / #5 Fenrir Blaze | LOSS | 4 | -1530 Ft | -2640 Ft |
+| 212 | 12:36 | 4 | 1300 | 1050 | 900 | #4 Jeanne d'Acier / #2 Élektra Mist / #5 Huba | WIN | 1 | +3050 Ft | +410 Ft |
