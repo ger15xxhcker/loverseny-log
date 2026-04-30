@@ -234,13 +234,40 @@
   @keyframes spin { to { transform: rotate(360deg); } }
   .empty.no-data::before { display: none; }
 
+  /* ---------- profit summary ---------- */
+  .profit-summary {
+    text-align: center;
+    margin: 28px auto 8px;
+    padding: 18px 16px;
+    max-width: 380px;
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+  }
+  .profit-summary .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .profit-summary .value {
+    font-size: 28px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
+  }
+  .profit-summary .value.pos { color: var(--ok); }
+  .profit-summary .value.neg { color: var(--err); }
+
   /* ---------- footer ---------- */
   .footer {
     text-align: center;
     color: var(--muted);
     font-size: 10px;
     padding: 20px 14px;
-    margin-top: 20px;
+    margin-top: 12px;
     border-top: 1px solid var(--border);
   }
 
@@ -285,6 +312,42 @@
     });
   }
 
+  function renderProfit() {
+    const old = document.getElementById('profit-summary');
+    if (old) old.remove();
+
+    const tables = document.querySelectorAll('#content table');
+    if (tables.length === 0) return;
+    const lastTable = tables[tables.length - 1];
+
+    // megkeressuk a 'cumul' oszlop indexet a fejlecbol (case-insensitive)
+    const headers = Array.from(lastTable.querySelectorAll('thead th, tr:first-child th'));
+    let idx = headers.findIndex(h => /cumul/i.test(h.textContent || ''));
+    if (idx === -1) idx = headers.length - 1; // fallback: utolso oszlop
+
+    const rows = lastTable.querySelectorAll('tbody tr');
+    const lastRow = rows.length ? rows[rows.length - 1] : null;
+    if (!lastRow) return;
+
+    const cells = lastRow.querySelectorAll('td');
+    if (idx < 0 || idx >= cells.length) return;
+    const value = (cells[idx].textContent || '').trim();
+    if (!value) return;
+
+    const isNeg = /^-/.test(value);
+    const cls = isNeg ? 'neg' : 'pos';
+
+    const div = document.createElement('div');
+    div.id = 'profit-summary';
+    div.className = 'profit-summary';
+    div.innerHTML =
+      '<div class="label">Futás óta elért profit</div>' +
+      '<div class="value ' + cls + '">' + value + '</div>';
+
+    const main = document.querySelector('main');
+    main.appendChild(div);
+  }
+
   async function load() {
     try {
       const t = Date.now();
@@ -318,6 +381,7 @@
           }
         }
         wrapTables();
+        renderProfit();
         lastHash = hash;
       }
 
