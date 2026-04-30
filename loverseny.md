@@ -8,4 +8,3 @@
 
 | Race | Time | Lvl | H2 | H3 | H4 | Podium (1/2/3) | Result | Next | P&L | Cumul |
 |------|------|-----|----|----|----|----------------|--------|------|-----|-------|
-| 260 | ? | 0 | 0 | 0 | 0 | #10 010,000 / #3 80 | OBSERVE | 1 | +0 Ft | +0 Ft | Warmup race only - ladder starts on next race
