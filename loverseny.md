@@ -25,3 +25,4 @@
 | 123 | 08:09 | 1 | 200 | 170 | 150 | #1 Electra Snow / #3 Senor Felipe / #4 Elit Mandea | LOSS | 2 | -520 Ft | +2240 Ft |
 | 124 | 08:12 | 2 | 300 | 250 | 220 | #4 Don Faustino / #5 Titan / #1 Coquette Rouge | WIN | 1 | +770 Ft | +3010 Ft |
 | 125 | 08:15 | 1 | 200 | 170 | 150 | SKIPPED — result panel ablak rövid | SKIPPED | 1 | ? | +3010 Ft |
+| 126 | 08:18 | 1 | 200 | 170 | 150 | #4 Ikarosz Fia / #1 Golden Sea / #3 National Flirt | WIN | 1 | +530 Ft | +3540 Ft |
