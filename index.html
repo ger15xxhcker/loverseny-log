@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Loverseny Log</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+  :root {
+    --bg: #0f1419;
+    --panel: #1a2028;
+    --border: #2a3340;
+    --text: #e6e8eb;
+    --muted: #8a94a3;
+    --accent: #4fc3f7;
+    --accent-2: #66bb6a;
+    --err: #ef5350;
+    --row-alt: #161c24;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f7f8fa;
+      --panel: #ffffff;
+      --border: #e3e7ec;
+      --text: #1a1f26;
+      --muted: #6b7480;
+      --accent: #0277bd;
+      --accent-2: #2e7d32;
+      --err: #c62828;
+      --row-alt: #f3f5f8;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.55;
+    min-height: 100vh;
+  }
+  header {
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+  }
+  h1 { margin: 0; font-size: 18px; font-weight: 600; letter-spacing: 0.3px; }
+  .meta { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--muted); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); transition: background 0.3s; }
+  .dot.ok { background: var(--accent-2); box-shadow: 0 0 8px var(--accent-2); }
+  .dot.err { background: var(--err); box-shadow: 0 0 8px var(--err); }
+  main { max-width: 1200px; margin: 0 auto; padding: 24px; }
+  #content { font-size: 14px; }
+  #content h1, #content h2, #content h3 {
+    border-bottom: 1px solid var(--border); padding-bottom: 6px; margin-top: 28px;
+  }
+  #content h1 { font-size: 22px; }
+  #content h2 { font-size: 18px; }
+  #content h3 { font-size: 16px; }
+  #content table {
+    border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 13px;
+    background: var(--panel); border-radius: 6px; overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  #content th, #content td { padding: 8px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  #content th {
+    background: var(--bg); font-weight: 600; color: var(--accent);
+    text-transform: uppercase; font-size: 11px; letter-spacing: 0.5px;
+  }
+  #content tr:nth-child(even) td { background: var(--row-alt); }
+  #content tr:hover td { background: rgba(79, 195, 247, 0.08); }
+  #content code {
+    background: var(--row-alt); padding: 2px 6px; border-radius: 3px;
+    font-family: "Cascadia Code", Consolas, monospace; font-size: 12px;
+  }
+  #content pre {
+    background: var(--panel); border: 1px solid var(--border);
+    padding: 12px; border-radius: 6px; overflow-x: auto;
+  }
+  #content pre code { background: none; padding: 0; }
+  #content blockquote {
+    border-left: 3px solid var(--accent); padding-left: 12px;
+    color: var(--muted); margin: 12px 0;
+  }
+  .empty { text-align: center; color: var(--muted); padding: 60px 20px; font-size: 14px; }
+  .footer {
+    text-align: center; color: var(--muted); font-size: 11px;
+    padding: 24px; border-top: 1px solid var(--border); margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Loverseny Log</h1>
+  <div class="meta">
+    <span id="updated">betoltes...</span>
+    <span class="dot" id="dot" title="kapcsolat allapota"></span>
+  </div>
+</header>
+<main>
+  <div id="content"><div class="empty">Betoltes...</div></div>
+</main>
+<div class="footer">Auto-frissites 30 mp-enkent &middot; GitHub Pages</div>
+<script>
+  marked.setOptions({ gfm: true, breaks: false });
+  let lastHash = null;
+
+  async function load() {
+    try {
+      const t = Date.now();
+      const [mdResp, metaResp] = await Promise.all([
+        fetch('./loverseny.md?t=' + t, { cache: 'no-store' }),
+        fetch('./meta.json?t=' + t, { cache: 'no-store' }).catch(() => null),
+      ]);
+      if (!mdResp.ok) throw new Error('HTTP ' + mdResp.status);
+      const md = await mdResp.text();
+
+      let meta = null;
+      if (metaResp && metaResp.ok) {
+        try { meta = await metaResp.json(); } catch (e) {}
+      }
+
+      const hash = md.length + '_' + (meta && meta.updated_at ? meta.updated_at : '');
+      if (hash !== lastHash) {
+        document.getElementById('content').innerHTML = md.trim()
+          ? marked.parse(md)
+          : '<div class="empty">Meg nincs adat. Inditsd el a push scriptet a gepeden.</div>';
+        lastHash = hash;
+      }
+
+      if (meta && meta.updated_at) {
+        const d = new Date(meta.updated_at);
+        const ageSec = Math.round((Date.now() - d.getTime()) / 1000);
+        const ageStr = ageSec < 60 ? ageSec + ' mp' :
+                       ageSec < 3600 ? Math.round(ageSec/60) + ' perc' :
+                       Math.round(ageSec/3600) + ' ora';
+        document.getElementById('updated').textContent =
+          'Frissitve: ' + d.toLocaleString('hu-HU') + ' (' + ageStr + ' ezelott)';
+      } else {
+        document.getElementById('updated').textContent = 'nincs idobelyeg';
+      }
+      document.getElementById('dot').className = 'dot ok';
+    } catch (e) {
+      document.getElementById('dot').className = 'dot err';
+      document.getElementById('updated').textContent = 'kapcsolati hiba';
+    }
+  }
+
+  load();
+  setInterval(load, 30000);
+</script>
+</body>
+</html>
