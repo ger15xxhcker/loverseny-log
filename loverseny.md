@@ -17,3 +17,4 @@
 | 256 | 14:48 | 1 | 200 | 170 | 150 | #7 Beat zenész / #1 Vészmadár / #8 Don Caramelo | LOSS | 2 | -520 Ft | +440 Ft |
 | 257 | 14:51 | 2 | 300 | 250 | 220 | #1 Psyche Fleur / #8 Sheriff / #12 Herakleitosz | LOSS | 3 | -770 Ft | -330 Ft |
 | 258 | 14:54 | 3 | 600 | 500 | 430 | #3 Honeycrash / #9 Queen's Echo / #7 Juno Drift | WIN | 1 | +1470 Ft | +1140 Ft |
+| 259 | 14:57 | 1 | 200 | 170 | 150 | #6 Messerschmitt / #4 B?owulf Son / #5 Herkules Flame | LOSS | 2 | -520 Ft | +620 Ft |
